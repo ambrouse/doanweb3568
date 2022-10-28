@@ -1,0 +1,65 @@
+﻿@model IEnumerable<card.Models.Truyen>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" href="~/css/chitiet.css?i=1" rel="stylesheet" />
+
+    <title>Listad</title>
+</head>
+<body>
+    <a href="~/Home/Themm">them</a>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ten)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gioiThieu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.imgUrl)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ten)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.gioiThieu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.gia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.imgUrl)
+                </td>
+                <td>
+                    <a href="#" onclick="deleteid(@item.id)">xoa</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+    <script>
+        var deleteid = (id) => {
+            if (confirm("xoa ?" == true)) {
+                location.href = "/Home/Delete/" + id;
+            }
+        }
+    </script>
+</body>
+</html>

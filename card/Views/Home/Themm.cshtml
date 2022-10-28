@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Themm</title>
+</head>
+<body>
+    <div>
+        <p style="color:mediumvioletred">@ViewBag.text</p>
+    </div>
+    <div> 
+        <form action="~/Home/Themm" method="post" enctype="multipart/form-data">
+            <input name="id" type="number" placeholder="id" />
+            <input name="ten" type="text" placeholder="name" />
+            <input name="gioiThieu"type="text" placeholder="gioi thieu"/>
+            <input name="gia" type="number" placeholder="gia tien"/>
+            <input name="Fileanh" type="file"/>
+            <button type="submit">create</button>
+        </form>
+    </div>
+</body>
+</html>

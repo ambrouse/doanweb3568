@@ -1,0 +1,94 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.card {
+  max-width: 30%;
+  max-height: 300px;
+  width: 30%;
+  height: 300px;
+  overflow: hidden;
+  margin-top:50px;
+}
+.card__img img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+ 
+}
+.card__title p {
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  line-height: 50px;
+}
+.card__details a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: rgba(209, 0, 236, 0.692);
+  transition: all 0.3s linear;
+}
+.card__details a:hover {
+  color: blueviolet;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/*# sourceMappingURL=truyen.css.map */

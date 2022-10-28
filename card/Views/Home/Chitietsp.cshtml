@@ -1,0 +1,32 @@
+﻿@model card.Models.Truyen
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" href="~/css/chitiet.css?i=1"rel="stylesheet" />
+    <title>Chitietsp</title>
+</head>
+<body>
+    <div class="profice">
+        <div class="profice__img">
+            <img src="@Model.imgUrl" alt="">
+        </div>
+        <div class="profice__title">
+            <p>Name :</p>
+            <p>@Model.ten<p>
+        </div>
+        <div class="profice__details">
+            <span>Details   :@Model.gioiThieu</span>
+        </div>
+        <div class="profice__buy">
+            <a>them vao gio hang</a>
+            <a>mua hang</a>
+        </div>
+    </div>
+</body>
+</html>

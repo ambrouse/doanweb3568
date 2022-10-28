@@ -1,0 +1,113 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.profice {
+    max-width: 1440px;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .profice__img img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+    max-height: 600px;
+    width: 80%;
+    height: 600px;
+  }
+  .profice__title {
+    text-align: center;
+    word-wrap: break-word;
+  }
+  .profice__title p {
+    font-size: 1.3rem;
+    color: black;
+  }
+  .profice__details {
+    margin: 0 auto;
+    max-width: 80%;
+    word-wrap: break-word;
+  }
+  .profice__details span {
+    line-height: 30px;
+    font-size: 1.3rem;
+    color: rgb(236, 146, 221);
+  }
+  .profice__buy {
+    margin: 0 auto;
+    max-width: 80%;
+    text-align: center;
+  }
+  .profice__buy a {
+    margin: 100px 0px 100px 0px;
+    display: block;
+    background-image: linear-gradient(to right, rgba(219, 0, 0, 0.61), rgba(231, 14, 184, 0.575)), url();
+    font-size: 1.3rem;
+    color: bisque;
+    padding: 10px 20px;
+  }
+table {
+    width: 100%;
+    boder-collapse:collapse;
+}
+th {
+    border:1px solid;
+}
+td {
+    border:1px solid;
+}
+  /*# sourceMappingURL=truyen.css.map */
+  
