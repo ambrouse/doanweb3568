@@ -1,0 +1,29 @@
+﻿@model shoptextno1.Models.truyen
+
+@{
+    ViewBag.Title = "Them";
+    Layout = "~/Views/layout/layout.cshtml";
+    shoptextno1.Models.dpshopEntities1 db = new shoptextno1.Models.dpshopEntities1();
+}
+<form enctype="multipart/form-data" method="post">
+    <div class="err">
+        <p>@ViewBag.err</p>
+    </div>
+        <input type="text" name="ten" value="@Model.ten" placeholder="ten truyen" />
+        <input type="text" name="tinhtrang" value="@Model.tinhtrang" placeholder="tinh trang" />
+        <textarea name="mota" placeholder="mo ta truyen">
+        @Model.mota
+      </textarea>
+        <input type="number" name="gia" value="@Model.gia" placeholder="gia" />
+        <select name="idLoai">
+            @foreach (var i in db.theloais.ToList())
+            {
+                <option value="@i.id">@i.ten</option>
+            }
+        </select>
+        <input type="file" name="fileanh" />
+        <button type="submit">create</button>
+    </form>
+    @section css{
+        <link rel="stylesheet" href="~/font/css/Them.css" />
+    }

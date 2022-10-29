@@ -1,0 +1,38 @@
+﻿@model IEnumerable<shoptextno1.Models.truyen>
+@{
+    ViewBag.Title = "danh sach truyen";
+    Layout = "~/Views/layout/layout.cshtml";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/font/css/style.css" />
+    <title>List</title>
+</head>
+<body>
+    <div class="card">
+        @foreach (var i in Model) { 
+        <div class="card__item">
+            <div class="img">
+                <img src="@i.img" alt="">
+            </div>
+            <div class="name">
+                <p>@i.ten</p>
+                <a href="">chi tiet san pham >>>></a>
+            </div>
+            <div class="price">
+                <p>price: @i.gia</p>
+            </div>
+            <div class="vote">
+                <span>
+                    10/10
+                    &#9733;
+                </span>
+            </div>
+        </div>
+        }
+    </div>
+</body>
+</html>

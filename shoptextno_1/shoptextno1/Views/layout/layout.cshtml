@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="~/font/css/style.css" />
+    @RenderSection("css",false)
+    <title>@ViewBag.title</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="nav__item"><a href="">tim kiem</a></div>
+        <div class="nav__item"><a href="">gio hang</a></div>
+        <div class="nav__item">
+            <div class="dropdow">
+                <p>menu</p>
+                <div class="dropdow__item">
+                    <a href="~/Truyen/Index">truyen</a>
+                    <a href="">action link 1</a>
+                    <a href="">action link 1</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav__item">
+            <div class="dropdow">
+                <p>the loai</p>
+                <div class="dropdow__item">
+                    <a href="">action link 1</a>
+                    <a href="">action link 1</a>
+                    <a href="">action link 1</a>
+                    <a href="">action link 1</a>
+                    <a href="">action link 1</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    @RenderBody()
+</body>
+</html>
