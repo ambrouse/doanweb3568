@@ -12,6 +12,8 @@ namespace shoptextno1.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class dpshopEntities1 : DbContext
     {
@@ -28,5 +30,14 @@ namespace shoptextno1.Models
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<theloai> theloais { get; set; }
         public virtual DbSet<truyen> truyens { get; set; }
+    
+        public virtual ObjectResult<pr_timkiemten_Result> pr_timkiemten(string ten)
+        {
+            var tenParameter = ten != null ?
+                new ObjectParameter("ten", ten) :
+                new ObjectParameter("ten", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<pr_timkiemten_Result>("pr_timkiemten", tenParameter);
+        }
     }
 }

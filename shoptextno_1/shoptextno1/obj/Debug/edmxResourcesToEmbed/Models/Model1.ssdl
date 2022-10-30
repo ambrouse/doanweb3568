@@ -41,6 +41,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="pr_timkiemten" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ten" Type="nvarchar" Mode="In" />
+  </Function>
   <EntityContainer Name="dpshopModelStoreContainer">
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="theloai" EntityType="Self.theloai" Schema="dbo" store:Type="Tables" />

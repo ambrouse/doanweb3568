@@ -1,0 +1,117 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.267);
+}
+
+.accout {
+  background-color: rgba(19, 53, 53, 0.452);
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  transform: translateY(40%);
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+.accout__item {
+  padding: 20px 0px;
+  width: 100%;
+  height: 33.333%;
+}
+.accout__item input {
+  display: block;
+  margin: 0 auto;
+  box-sizing: unset;
+  border: none;
+  outline: none;
+  width: 90%;
+  height: 40px;
+  background-color: rgba(100, 98, 98, 0.336);
+  color: white;
+  text-align: center;
+  font-size: 1.1rem;
+  transition: all 0.4s linear;
+}
+.accout__item input:focus {
+  border: 1.5px rgba(0, 255, 234, 0.479) solid;
+}
+.accout__item input::placeholder {
+  color: white;
+  text-align: center;
+}
+.accout__item button {
+  display: block;
+  margin: 0 auto;
+  padding: 7px 25px;
+  background-color: rgba(51, 53, 53, 0.342);
+  border: none;
+  color: white;
+  transition: all 0.2s linear;
+}
+.accout__item button:hover {
+  transform: translateY(-3px);
+}
+.accout__item button:active {
+  transform: translateY(2px);
+}
+.accout p {
+    color: rgba(0, 227, 243, 0.589);
+    text-align: center;
+    font-size: 1.3rem;
+}
+/*# sourceMappingURL=accout.css.map */

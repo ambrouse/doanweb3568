@@ -1,148 +1,100 @@
-/* http://meyerweb.com/eric/tools/css/reset/ */
-/* v1.0 | 20080212 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-/* remember to define focus styles! */
-:focus {
-  outline: 0;
-}
-
-/* remember to highlight inserts somehow! */
-ins {
-  text-decoration: none;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-/* tables still need 'cellspacing="0"' in the markup */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-body {
-  max-width: 1440px;
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.267);
-}
 
 .card {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  column-gap: 20px;
-  row-gap: 50px;
-}
-@media screen and (max-width: 700px) {
-  .card {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 10px;
-    row-gap: 30px;
-  }
-}
-@media screen and (max-width: 1040px) {
-  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     column-gap: 20px;
     row-gap: 50px;
-  }
 }
-.card__item {
-  display: flex;
-  flex-direction: column;
-  height: 400px;
-  background-color: rgba(94, 97, 97, 0.411);
-}
+
 @media screen and (max-width: 700px) {
-  .card__item {
-    height: 300px;
-  }
+    .card {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 30px;
+    }
 }
-.card__item .img {
-  height: 300px;
-  flex-shrink: 0;
-}
-.card__item .img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
 @media screen and (max-width: 1040px) {
-  .card__item .img {
-    height: 250px;
-  }
+    .card {
+        column-gap: 20px;
+        row-gap: 50px;
+    }
 }
+
+.card__item {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    background-color: rgba(94, 97, 97, 0.411);
+}
+
 @media screen and (max-width: 700px) {
-  .card__item .img {
-    height: 150px;
-  }
+    .card__item {
+        height: 300px;
+    }
 }
+
+.card__item .img {
+    height: 300px;
+    flex-shrink: 0;
+}
+
+    .card__item .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+@media screen and (max-width: 1040px) {
+    .card__item .img {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .card__item .img {
+        height: 150px;
+    }
+}
+
 .card__item .name {
-  margin-left: 20px;
-  height: 150px;
+    margin-left: 20px;
+    height: 150px;
 }
-.card__item .name p {
-  font-size: 1.4rem;
-  margin-top: 10px;
-  line-height: 30px;
-}
-.card__item .name a {
-  line-height: 0px;
-  font-size: 1rem;
-  color: red;
-  text-decoration: none;
-}
+
+    .card__item .name p {
+        font-size: 1.4rem;
+        margin-top: 10px;
+        line-height: 30px;
+    }
+
+    .card__item .name a {
+        line-height: 0px;
+        font-size: 1rem;
+        color: red;
+        text-decoration: none;
+    }
+
 .card__item .price {
-  margin-left: 20px;
-  height: 25px;
-  font-size: 1.2rem;
-  color: black;
+    margin-left: 20px;
+    height: 25px;
+    font-size: 1.2rem;
+    color: black;
 }
+
 .card__item .vote {
-  margin-left: 20px;
-  height: 25px;
-  font-size: 1.2rem;
-  color: rgb(208, 255, 0);
+    margin-left: 20px;
+    height: 25px;
+    font-size: 1.2rem;
+    color: rgb(208, 255, 0);
 }
-.card__item .vote span {
-  float: right;
-}
+
+    .card__item .vote span {
+        float: right;
+    }
+
 .nav {
     width: 100%;
     display: flex;
@@ -156,57 +108,90 @@ body {
     text-align: center;
 }
 
+    .nav__item form {
+        padding: 10px 0px;
+        display: flex;
+    }
+
+        .nav__item form input {
+            width: 70%;
+            padding: 5px;
+            background-color: rgba(0, 0, 0, 0.151);
+        }
+
+        .nav__item form button {
+            width: 30%;
+            background-color: rgba(0, 0, 0, 0.233);
+        }
+
     .nav__item a {
         line-height: 50px;
         text-decoration: none;
         color: black;
     }
 
-    .nav__item .dropdow {
-        position: relative;
+@media screen and (max-width: 700px) {
+    .nav__item:first-child {
+        display: none;
     }
 
-        .nav__item .dropdow p {
-            line-height: 50px;
-            color: white;
-            cursor: pointer;
+    .nav__item {
+        width: 30.3333%;
+    }
+}
+
+.nav__item .dropdow {
+    position: relative;
+}
+
+    .nav__item .dropdow p {
+        line-height: 50px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .nav__item .dropdow form {
+        display: none;
+    }
+
+@media screen and (max-width: 700px) {
+    .nav__item .dropdow form {
+        display: flex;
+    }
+}
+
+.nav__item .dropdow__item {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    transform: translatex(-50%);
+    visibility: hidden;
+}
+@media screen and (max-width:700px) {
+    .nav__item .dropdow__item {
+        width:200%;
+    }
+    }
+
+    .nav__item .dropdow__item a {
+        font-size: 1.2rem;
+        display: block;
+        line-height: 70px;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        transition: all 0.2s linear;
+    }
+
+        .nav__item .dropdow__item a:hover {
+            font-size: 1.4rem;
         }
 
-    .nav__item .dropdow__item {
-        position: absolute;
-        left: 50%;
-        width: 100%;
-        transform: translatex(-50%);
-        visibility: hidden;
-    }
-@media screen and (maxwidth) {
-    .nav__item .dropdow__item {
-        max-width:200%;
-    }
-    }
-
-        .nav__item .dropdow__item a {
-            font-size: 1.2rem;
-            display: block;
-            line-height: 70px;
-            text-decoration: none;
-            color: rgb(0, 0, 0);
-            transition: all 0.2s linear;
+        .nav__item .dropdow__item a:active {
+            background-color: rgba(0, 0, 0, 0.295);
         }
-
-            .nav__item .dropdow__item a:hover {
-                font-size: 1.4rem;
-            }
-
-            .nav__item .dropdow__item a:active {
-                background-color: rgba(0, 0, 0, 0.295);
-            }
 
 .dropdow:hover .dropdow__item {
     visibility: inherit;
 }
 
-.err p{
-    font-size:1.3rem;
-    color:mediumvioletred;
-}
+/*# sourceMappingURL=style.css.map */

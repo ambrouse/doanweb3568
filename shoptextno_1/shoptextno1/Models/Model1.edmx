@@ -46,6 +46,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="pr_timkiemten" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ten" Type="nvarchar" Mode="In" />
+        </Function>
         <EntityContainer Name="dpshopModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="theloai" EntityType="Self.theloai" Schema="dbo" store:Type="Tables" />
@@ -110,7 +113,15 @@
             <End Role="theloai" EntitySet="theloais" />
             <End Role="truyen" EntitySet="truyens" />
           </AssociationSet>
+          <FunctionImport Name="pr_timkiemten" ReturnType="Collection(dpshopModel.pr_timkiemten_Result)">
+          <Parameter Name="ten" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
+        <ComplexType Name="pr_timkiemten_Result">
+          <Property Type="String" Name="ten" Nullable="true" MaxLength="250" />
+          <Property Type="Decimal" Name="gia" Nullable="true" Precision="19" />
+          <Property Type="String" Name="img" Nullable="true" MaxLength="250" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -149,6 +160,15 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="pr_timkiemten" FunctionName="dpshopModel.Store.pr_timkiemten">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dpshopModel.pr_timkiemten_Result">
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="gia" ColumnName="gia" />
+                <ScalarProperty Name="img" ColumnName="img" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

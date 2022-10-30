@@ -33,5 +33,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="pr_timkiemten" FunctionName="dpshopModel.Store.pr_timkiemten">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dpshopModel.pr_timkiemten_Result">
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="gia" ColumnName="gia" />
+          <ScalarProperty Name="img" ColumnName="img" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

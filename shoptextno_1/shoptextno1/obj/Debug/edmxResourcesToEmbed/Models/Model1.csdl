@@ -51,5 +51,13 @@
       <End Role="theloai" EntitySet="theloais" />
       <End Role="truyen" EntitySet="truyens" />
     </AssociationSet>
+    <FunctionImport Name="pr_timkiemten" ReturnType="Collection(dpshopModel.pr_timkiemten_Result)">
+      <Parameter Name="ten" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
+  <ComplexType Name="pr_timkiemten_Result">
+    <Property Type="String" Name="ten" Nullable="true" MaxLength="250" />
+    <Property Type="Decimal" Name="gia" Nullable="true" Precision="19" />
+    <Property Type="String" Name="img" Nullable="true" MaxLength="250" />
+  </ComplexType>
 </Schema>

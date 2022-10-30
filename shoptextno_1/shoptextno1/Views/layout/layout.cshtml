@@ -1,5 +1,7 @@
 ﻿
 @{
+    shoptextno1.Models.dpshopEntities1 db = new shoptextno1.Models.dpshopEntities1();
+    var tr = db.theloais.ToList();
     Layout = null;
 }
 
@@ -9,18 +11,27 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="~/font/css/style.css" />
-    @RenderSection("css",false)
+    <link rel="stylesheet" type="text/css" href="~/font/css/sccreset.css?id=1" />
+    <link rel="stylesheet" type="text/css" href="~/font/css/style.css?id=1" />
     <title>@ViewBag.title</title>
 </head>
 <body>
     <div class="nav">
-        <div class="nav__item"><a href="">tim kiem</a></div>
+        <div class="nav__item">
+            <form method="get" action="/Truyen/Listtimkiem">
+                <input type="text" name="ten" value="@ViewBag.search">
+                <button type="submit">search</button>
+            </form>
+        </div>
         <div class="nav__item"><a href="">gio hang</a></div>
         <div class="nav__item">
             <div class="dropdow">
                 <p>menu</p>
                 <div class="dropdow__item">
+                    <form method="get" action="/Truyen/Listtimkiem">
+                        <input type="text" name="ten">
+                        <button type="submit">search</button>
+                    </form>
                     <a href="~/Truyen/Index">truyen</a>
                     <a href="">action link 1</a>
                     <a href="">action link 1</a>
@@ -31,11 +42,13 @@
             <div class="dropdow">
                 <p>the loai</p>
                 <div class="dropdow__item">
-                    <a href="">action link 1</a>
-                    <a href="">action link 1</a>
-                    <a href="">action link 1</a>
-                    <a href="">action link 1</a>
-                    <a href="">action link 1</a>
+                    @if (tr.Count != 0)
+                    {
+                     foreach (var i in tr)
+                     {
+                            <a href="#">@i.ten</a>
+                     }
+                    }
                 </div>
             </div>
         </div>

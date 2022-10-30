@@ -1,0 +1,16 @@
+﻿
+@model  shoptextno1.Models.theloai
+@{
+    ViewBag.Title = "Listloaitruyen";
+    Layout = "~/Views/layout/layout.cshtml";
+}
+<p class="err">@ViewBag.err</p>
+<form action="~/admin/Admin/Themloaitruyen"method="post">
+    <input value="@Model.id" name="id" placeholder="ID" />
+    <input value="@Model.ten" name="ten" placeholder="Ten the loai" />
+    <button type="submit">create</button>
+</form>
+
+
+
+
