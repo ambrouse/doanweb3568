@@ -1,0 +1,33 @@
+.create {
+  max-width: 1040px;
+  width: 50%;
+  height: 500px;
+  margin: 0 auto;
+}
+.create form {
+  display: flex;
+  flex-direction: column;
+}
+.create form select {
+  margin-top: 30px;
+  width: 20%;
+  font-size: 1rem;
+}
+.create form input {
+  margin-top: 30px;
+  font-size: 1rem;
+  width: 50%;
+  border: 1px solid red;
+}
+.create form input:first-child {
+  height: 40px;
+}
+.create form button {
+  background-color: rgba(255, 0, 0, 0.445);
+  border: 1px solid rgb(0, 209, 80);
+  margin-top: 50px;
+  width: 100px;
+  padding: 10px 20px;
+}
+
+/*# sourceMappingURL=them.css.map */

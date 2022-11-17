@@ -1,0 +1,184 @@
+﻿@model IEnumerable<shopxe_2.Models.sanpham>
+@{
+    ViewBag.Title = "Thảo My, Cửa hàng cho thuê xe máy đà lạt, giá rẻ, uy tín";
+    ViewBag.keywords = "Cửa hàng cho thuê xe máy đà lạt, thuê xe máy, dịch vụ thuê xe máy, du lịch đà lạt";
+    ViewBag.description = "Khách du lịch đến với Đà Lạt thường bị bối rối về khoảng đi lại làm sao? Phương tiện là gì? Vậy xe máy Thảo My xin được phép mang đến với khách hàng dịch vụ với các loại xe tay ga của Honda đời mới đảm bảo chuyến đi của khách hàng được trọn vẹn";
+    Layout = "~/Views/layout/layout.cshtml";
+}
+<div class="banner_section layout_padding">
+    <div class="container">
+        <div id="costum_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <h1 class="furniture_text">CỬA HÀNG</h1>
+                    <p class="there_text">Khách du lịch đến với Đà Lạt thường bị bối rối về khoảng đi lại làm sao? Phương tiện là gì? Vậy xe máy Thảo My xin được phép mang đến với khách hàng dịch vụ với các loại xe tay ga của Honda đời mới đảm bảo chuyến đi của khách hàng được trọn vẹn</p>
+                    <div class="contact_bt_main">
+                        <div class="contact_bt"><a title="danh sach xe" href="~/Danhsachxe/index">Thuê Ngay</a></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <h1 class="furniture_text">Địa Chỉ</h1>
+                    <p class="there_text">
+                        Số 202, đường Ngô Quyền, phường 6, Thành phố Đà Lạt, tỉnh Lâm Đồng.<br/>
+                        Thảo My khuyến khích khác hàng đến trực tiếp cửa hàng để sử dụng dịch vụ
+                    </p>
+                    <div class="contact_bt_main">
+                        <div class="contact_bt"><a title="danh sach xe" href="~/Danhsachxe/index">Thuê Ngay</a></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <h1 class="furniture_text">GIÁ CẢ</h1>
+                    <p class="there_text">Khi đến với Thảo My khách hàng sẽ được hưởng khuyến mãi với giá tốt nhất, Dịch vụ tốt nhất với thủ tục thuê xe đơn giản</p>
+                    <div class="contact_bt_main">
+                        <div class="contact_bt"><a title="danh sach xe" href="~/Danhsachxe/index">Thuê Ngay</a></div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#costum_slider" role="button" data-slide="prev">
+                <i class=""><img src="~/accect/images/left-arrow.png" alt="arrow" ></i>
+            </a>
+            <a class="carousel-control-next" href="#costum_slider" role="button" data-slide="next">
+                <i class=""><img src="~/accect/images/right-arrow.png"alt="arrow"></i>
+            </a>
+        </div>
+    </div>
+</div>
+    <!-- furnitures section start -->
+    <div class="furnitures_section layout_padding">
+        <div class="container">
+            <h1 class="our_text">DỊCH VỤ</h1>
+            <p class="ipsum_text">
+                Thảo My luôn mong muốn mang đến cho khách hàng những trải nghiệm thật tốt về chuyến du lịch bằng dịch vụ của chính mình với 2 loại xe Air Blade và Vision của hãng Honda.
+            </p>
+            <div class="furnitures_section2 layout_padding">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="container_main">
+                            <img src="~/imgxe/AB-Trangchinh2.jpg" alt="xe Air Blade" class="image">
+                            <div class="overlay">
+                                <a href="~/Danhsachxe/timkiem?name=Air+Blade" class="icon" title="tim kiem xe Air Blade">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="temper_text">Air Blade</h3>
+                        <p class="dololr_text">Tại Thảo My có nhiều xe Air Blade đời cao luôn được kiểm tra và bảo hành định kì nhằm tránh gặp các vấn đề khi đến tay khách hàng  </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="container_main">
+                            <img src="~/imgxe/VS-Trangchinh.jpg" alt="xe Vision" class="image">
+                            <div class="overlay">
+                                <a href="~/Danhsachxe/timkiem?name=Vision" class="icon" title="tim kiem xe Vision">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="temper_text">Vision</h3>
+                        <p class="dololr_text">Ngoài Air Blade ra chúng tôi cũng mang đến với khách hàng một lựa chọn khác (đời cao) với dáng xe nhỏ gọn tinh tế hơn khá phù hợp với các bạn nữ có nhu cầu thuê xe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- furnitures section end -->
+    <!-- who section start -->
+    <div class="who_section layout_padding">
+        <div class="container">
+            <h1 class="who_taital">CHÚNG TÔI LÀ AI ?</h1>
+            <p class="lorem_ipsum_text">Thảo My hiểu cảm giác của người đi thuê xe máy phải bỏ ra một số tiền để có được một chiếc xe đủ tốt, không gặp rắc rối khi đi trên đường. Tuy nhiên thật khó để tìm được một đơn vị cung cấp dịch vụ cho thuê xe uy tín, chất lượng hiện nay. Thảo Mỷ - tiên phong trở thành đơn vị số 1 về cung cấp dịch vụ thuê xe máy tự lái tại thành phố Đà Lạt với kim chỉ nam là trải nghiệm của khách hàng. </p>
+        </div>
+        <div class="get_bt_main">
+            <div class="get_bt"><a href="~/Danhsachxe/Danhsachxemoinhat" title="danh sach xe moi nhat ">Thuê xe ngay</a></div>
+        </div>
+    </div>
+    <!-- who section end -->
+    <!-- projects section start -->
+    <div class="projects_section layout_padding">
+        <div class="container">
+            <h1 class="our_text">Danh sách xe</h1>
+            <p class="ipsum_text">Dưới đây là danh sách các sản phẩm của chúng tôi</p>
+            <div id="main_slider" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="projects_section2">
+                            <div class="container_main1">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="container_main1">
+                                            <img src="~/imgxe/VS-Trangchinh.jpg" alt="xe Vision" class="image" style="width:100%">
+                                            <h1 class="modern_text">xe Vision</h1>
+                                            <div class="middle">
+                                                <div class="text">VIEW MORE</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="container_main1">
+                                            <img src="~/imgxe/AB-Trangchinh2.jpg" alt="xe Air Blade" class="image" style="width:100%">
+                                            <h1 class="modern_text">xe A Blade</h1>
+                                            <div class="middle">
+                                                <div class="text">VIEW MORE</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @foreach (var i in Model)
+                    {
+                        <div class="carousel-item">
+                            <div class="projects_section2">
+                                <div class="container_main1">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="container_main1">
+                                                <img src="@i.imgurl_1" alt="@i.ten" class="image" style="width:100%">
+                                                <h1 class="modern_text">@i.ten</h1>
+                                                <div class="middle">
+                                                    <div class="text">VIEW MORE</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="container_main1">
+                                                <img src="@i.imgurl_2" alt="@i.ten" class="image" style="width:100%">
+                                                <h1 class="modern_text">@i.ten</h1>
+                                                <div class="middle">
+                                                    <div class="text">VIEW MORE</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- projects section end -->
+    <!-- contact section start -->
+    <!-- contact section end -->
+    <!-- Javascript files-->
+    @section js{
+        <script src="~/accect/js/jquery.min.js"></script>
+        <script src="~/accect/js/popper.min.js"></script>
+        <script src="~/accect/js/bootstrap.bundle.min.js"></script>
+        <script src="~/accect/js/jquery-3.0.0.min.js"></script>
+        <script src="~/accect/js/plugin.js"></script>
+        <!-- sidebar -->
+        <script src="~/accect/js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="~/accect/js/custom.js"></script>
+        <!-- javascript -->
+        <script src="~/accect/js/owl.carousel.js"></script>
+        <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    }
+

@@ -1,0 +1,6 @@
+E:\Tu_hoc\shopxe_2_ver_2\comon\bin\Debug\comon.dll
+E:\Tu_hoc\shopxe_2_ver_2\comon\bin\Debug\comon.pdb
+E:\Tu_hoc\shopxe_2_ver_2\comon\obj\Debug\comon.csproj.AssemblyReference.cache
+E:\Tu_hoc\shopxe_2_ver_2\comon\obj\Debug\comon.csproj.CoreCompileInputs.cache
+E:\Tu_hoc\shopxe_2_ver_2\comon\obj\Debug\comon.dll
+E:\Tu_hoc\shopxe_2_ver_2\comon\obj\Debug\comon.pdb

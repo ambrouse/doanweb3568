@@ -1,0 +1,30 @@
+﻿@model IEnumerable<shopxe_2.Models.sanpham>
+@{
+    ViewBag.Title = "Cửa hàng thảo my, Danh sách xe cho thuê mới nhất, dịch vụ du lịch đà lạt ";
+    ViewBag.keywords = "Danh sách xe cho thuê mới nhất";
+    ViewBag.description = "Cửa hàng thảo my, danh sách xe mới nhất đang cho thuê,";
+    Layout = "~/Views/layout/layout.cshtml";
+}
+@section css{
+    <link rel="stylesheet" href="~/accect/css/cssreset.css"/>
+    <link rel="stylesheet" href="~/accect/css/cardsanpham.css"/>
+    }
+<div class="card">
+    @foreach (var i in Model) { 
+        <div class="card__item">
+            <div class="img">
+                <img src="@i.imgurl_1" alt="">
+            </div>
+            <div class="name">
+                <p>@i.ten</p>
+                <a href="~/Chitiet/?id=@i.id"></a>
+            </div>
+            <div class="gia">
+                <p>@i.loai1.ten</p>
+            </div>
+            <div class="gia">
+                <p>@i.hang1.ten</p>
+            </div>
+        </div>
+}
+</div>

@@ -1,0 +1,34 @@
+﻿@model IEnumerable<shopxe_2.Models.sanpham>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin/Views/layout/layout.cshtml";
+}
+@section css{
+    <link rel="stylesheet" href="~/accect/css/listad.css" />
+    }
+<div class="list">
+    <div class="list__item">
+        <p>ten</p>
+        <p>loai</p>
+        <p>hang</p>
+        <p></p>
+        <p></p>
+    </div>
+    @foreach (var i in Model) {
+        <div class="list__item">
+            <p>@i.ten</p>
+            <p>@i.loai</p>
+            <p>@i.hang</p>
+            <a href="~/admin/Quanlyxe/Update?id=@i.id">update</a>
+            <a href="#" onclick="deleteid(@i.id)">Delete</a>
+        </div>
+    }
+</div>
+<script>
+    var deleteid = (id) => {
+        if (confirm("you sur") == true) {
+            location.href ="/admin/Quanlyxe/Delete?id="+id
+        }
+    }
+</script>
+

@@ -1,0 +1,23 @@
+﻿
+@model IEnumerable<shopxe_2.Models.hang>
+@{
+    shopxe_2.Models.Database db = new shopxe_2.Models.Database();
+    ViewBag.Title = "danh sach hang xe";
+    Layout = "~/Areas/admin/Views/layout/layout.cshtml";
+}
+@section css{
+    <link rel="stylesheet" href="~/accect/css/listad.css" />
+}
+<div class="list">
+    <div class="list__item">
+        <p>id</p>
+        <p>ten</p>
+    </div>
+    @foreach (var i in db.hangs)
+    {
+        <div class="list__item">
+            <p>@i.id</p>
+            <p>@i.ten</p>
+        </div>
+    }
+</div>

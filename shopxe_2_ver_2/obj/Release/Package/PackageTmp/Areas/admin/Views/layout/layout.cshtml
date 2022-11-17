@@ -1,0 +1,74 @@
+﻿
+@{
+    var ad = (shopxe_2.Models.admin)HttpContext.Current.Session["ad"];
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/accect/css/cssreset.css">
+    <link rel="stylesheet" href="~/accect/css/navbaradmin.css?s=1">
+
+    @RenderSection("css",false)
+    <title>@ViewBag.title</title>
+</head>
+<body>
+        <div class="admin">
+            <div class="nav">
+                <div class="nav__item">
+                    <div class="dropdow">
+                        <span>&#8801;</span>
+                        <div class="dropdow__item">
+                            <div>
+                                <div class="dropdowmini">
+                                    <p id="text_1">tuy chinh xe</p>
+                                    <div class="dropdowmini__item" id="text_2">
+                                        <a href="~/admin/Quanlyxe/Index">danh sach xe</a>
+                                        <a href="~/admin/Quanlyxe/Them">them xe</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="dropdowmini">
+                                    <p>tuy chinh loai</p>
+                                    <div class="dropdowmini__item">
+                                        <a href="~/admin/Quanlyloai/Index">danh sach loai</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="dropdowmini">
+                                    <p>tuy chinh hang</p>
+                                    <div class="dropdowmini__item">
+                                        <a href="~/admin/Quanlyhang/Index">danh sach hang</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="dropdowmini">
+                                    <p>@ad.ten</p>
+                                    <div class="dropdowmini__item">
+                                        <a href="~/admin/Dangnhapadmin/Dangxuat">Dang xuat</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav__item">
+                    <form>
+                        <input type="text" name="ten">
+                        <button type="submit"><span>&#9740;</span></button>
+                    </form>
+                </div>
+            </div>
+            @RenderBody()
+        </div>
+@RenderSection("js",false)
+</body>
+</html>

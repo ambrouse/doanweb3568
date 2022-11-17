@@ -1,0 +1,30 @@
+﻿@model shopxe_2.Models.sanpham
+@{
+    ViewBag.Title = "them moi xe";
+    shopxe_2.Models.Database db = new shopxe_2.Models.Database();
+    Layout = "~/Areas/admin/Views/layout/layout.cshtml";
+}
+@section css{
+        <link rel="stylesheet" href="~/accect/css/them.css" />
+    }
+<div class="create">
+    <form action="/admin/Quanlyxe/Them"enctype="multipart/form-data" class="create__item" method="post">
+        <input type="text" name="ten" placeholder="nhap ten" value="@Model.ten">
+        <select name="hang">
+            @foreach (var i in db.loais) {
+                <option value="@i.id">@i.ten</option>
+            }
+        </select>
+        <select name="loai">
+            @foreach (var i in db.hangs)
+            {
+                <option value="@i.id">@i.ten</option>
+            }
+        </select>
+        <input type="file" name="file_1" />
+        <input type="file" name="file_2" />
+        <button type="submit">create</button>
+        <p style="color:darkred">@ViewBag.err</p>
+    </form>
+</div>
+

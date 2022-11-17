@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>mail tự động</title>
+</head>
+<body>
+    <h1>Đơn hàng mới từ Thảo My</h1>
+    <h3>Quý khách {{ten}} có đơn hàng : </h3>
+    <table style="border: 1px red solid; border-collapse:collapse;">
+        <tr>
+            <th style="border: 1px red solid;padding:10px 20px;">Tên</th>
+            <th style="border: 1px red solid;padding:10px 20px;">Số điện thoại</th>
+            <th style="border: 1px red solid; padding: 10px 20px;">email</th>
+            <th style="border: 1px red solid; padding: 10px 20px;">Địa chỉ</th>
+            <th style="border: 1px red solid; padding: 10px 20px;">Tổng giá</th>
+        </tr>
+        <tr>
+            <td style="border: 1px red solid; padding: 10px 20px;"> {{ten}}</td>
+            <td style="border: 1px red solid; padding: 10px 20px;"> {{sodt}}</td>
+            <td style="border: 1px red solid; padding: 10px 20px;">{{email}}</td>
+            <td style="border: 1px red solid; padding: 10px 20px;"> {{diachi}}</td>
+            <td style="border: 1px red solid; padding: 10px 20px;">{{giaca}}</td>
+        </tr>
+    </table>
+    <h4>Dưới đây là chi tiết đơn hàng của quý khách</h4>
+    <table>
+        <tr>
+            <th style="border: 1px red solid;padding:10px 20px;">Tên</th>
+            <th style="border: 1px red solid; padding: 10px 20px;">email</th>
+            <th style="border: 1px red solid; padding: 10px 20px;">Hãng</th>
+            <th style="border: 1px red solid; padding: 10px 20px;">loại</th>
+            <th style="border: 1px red solid; padding: 10px 20px;">số lượng</th>
+            <th style="border: 1px red solid; padding: 10px 20px;">Đơn giá</th>
+        </tr>

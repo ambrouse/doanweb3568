@@ -1,0 +1,41 @@
+﻿@model IEnumerable<shopxe_2.Models.sanpham>
+@{
+    ViewBag.Title = "cửa hàng thảo my, tìm kiếm xe "+ViewBag.timkiem;
+    ViewBag.keywords = "Cửa hàng thảo my, tìm kiếm xe";
+    ViewBag.description = "Tìm kiếm xe "+ViewBag.timkiem;
+    Layout = "~/Views/layout/layout.cshtml";
+}
+@section css{
+    <link rel="stylesheet" href="~/accect/css/cssreset.css" />
+    <link rel="stylesheet" href="~/accect/css/cardsanpham.css" />
+}
+<div class="card"><h1>Kết quả tìm kiếm sản phẩm</h1></div>
+<div class="card">
+    @if (Model.Count() > 0)
+    {
+        
+        foreach (var i in Model)
+        {
+            <div class="card__item">
+                <div class="img">
+                    <img src="@i.imgurl_1" alt="">
+                </div>
+                <div class="name">
+                    <p>@i.ten</p>
+                    <a href="~/Chitiet/?id=@i.id"></a>
+                </div>
+                <div class="gia">
+                    <p>@i.loai1.ten</p>
+                </div>
+                <div class="gia">
+                    <p>@i.hang1.ten</p>
+                </div>
+            </div>
+        }
+    }
+else
+            {
+                <p>không tìm thấy sản phẩm</p>
+            }
+</div>
+

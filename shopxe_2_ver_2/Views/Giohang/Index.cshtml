@@ -1,0 +1,76 @@
+﻿@model IEnumerable<shopxe_2.Models.chitietdonhang>
+
+@{
+    shopxe_2.Models.Database db = new shopxe_2.Models.Database();
+    ViewBag.title = "giohang";
+    var x = (shopxe_2.Models.user)HttpContext.Current.Session["user"];
+    Layout = "~/Views/layout/layout.cshtml";
+}
+@section css{
+    <link rel="stylesheet" href="~/accect/css/cssreset.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/accect/css/giohang.css" />
+}
+@section js{
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+}
+<div class="cart">
+    <div class="cart__title">
+        <p>gio hang</p>
+    </div>
+    <div class="cart__item-th">
+        <div class="img">
+            <p>san pham</p>
+        </div>
+        <div class="name">
+            <p>ten</p>
+        </div>
+        <div class="amount">
+            <p>so luong</p>
+        </div>
+        <div class="price">
+            <p>gia tien</p>
+        </div>
+        <div class="delete">
+            <p>xoa</p>
+        </div>
+    </div>
+    <form action="/Mail/index" method="post">
+        @foreach (var i in Model)
+        {
+            <input style="visibility:hidden " name="id" value="@x.id"/>
+            <div class="cart__item-td">
+                <div class="img">
+                    <img src="@db.sanphams.Find(i.idsanpham).imgurl_1" alt="">
+                </div>
+                <div class="name">
+                    <p>@i.ten</p>
+                </div>
+                <div class="amount">
+                    <input type="number" value="1"name="soluong">
+                </div>
+                <div class="price">
+                    <p>@db.sanphams.Find(i.idsanpham).gia</p>
+                </div>
+                <div class="delete">
+                    <a href="~/Giohang/Delete/?id=@i.id">&#8709;</a>
+                </div>
+            </div>
+        }
+        <button class="cart__button"onclick="thongbao()" type="submit">dat hang</button>
+    </form>
+    <hr/>
+   <h3 style="color:red;">NOTE : quy khach co the them so luong cho san pham tai gio hang</h3>
+   <h3 style="color:red;">NOTE : so luong cua san pham phai lon hon 0</h3>
+</div>
+<script>
+
+    var thongbao = () => {
+            if (@db.chitietdonhangs.Where(c=>c.iddonhang==x.id).Count()== 0) {
+            alert("khong tim thay donhang cua quy khach");
+            } else {
+            alert("chung toi se gui mail chi tiet don hang cho quy khach va se lien he qua sodt de xac nhan don hang va trao doi dia chi");
+            }
+    }
+</script>

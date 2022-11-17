@@ -1,0 +1,111 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>@ViewBag.title</title>
+    <meta name="keywords" content="@ViewBag.keywords">
+    <meta name="description" content="@ViewBag.description">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="~/accect/css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="~/accect/css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="~/accect/css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="~/accect/images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="~/accect/css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <!-- owl stylesheets -->
+    <link rel="stylesheet" href="~/accect/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/accect/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   
+    @RenderSection("css",false)
+</head>
+<body>
+    <div class="header_section">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="display:flex;">
+                <div class="logo" style="height:60px;"><a href="~/Trangchu/Index"><img src="~/imgxe/lo_go_xe.png" style="width:100%;height:100%;object-fit:cover;" /></a></div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/Danhsachxe/Danhsachxemoinhat">Thuê xe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/Danhsachxe/index">Mua xe</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <h1 class="call_text">Gọi tôi tại : 0792260788</h1>
+                    </form>
+                    <form class="form-inline my-2 my-lg-0" action="/Danhsachxe/timkiem">
+                        <input type="text" placeholder="nhap ten xe" name="name">
+                        <button type="submit" style="background-color: rgba(0, 0, 0, 0.308);padding: 0px 20px;">search</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+    @RenderBody()
+<div class="footer_section layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="fooer_logo"><img src="~/imgxe/lo_go_xe.png"></div>
+                <p class="footer_lorem_text">
+                    Cửa hàng xe máy uy tín tại <b> Đà Lạt</b>
+                </p>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <p class="customer_text">Hãy để chúng tôi giúp bạn</p>
+                <p class="footer_lorem_text">
+                    Trọn vẹn những trải nghiệm của bạn cùng gia đình bạn bè mà không cần lo lắng đến phương tiện đi lại.
+                    <br/><br/>
+                    Rất nhiều khách hàng chọn cửa hàng khác nhưng vẫn quay lại
+                    sử dụng dịch vụ của chúng tôi. Hãy chọn đúng ngay từ đầu để tiết kiệm thời gian và tiền bạc
+                </p>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <p class="customer_text">Thông tin của chúng tôi</p>
+                <p class="footer_lorem_text1">
+                    Zalo <b>0916750091</b><br/><br/>
+                    Số Điện Thoại<br />
+                    0792260788<br />
+                    0389177176<br />
+                </p>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <p class="customer_text">Địa chỉ cửa hàng</p>
+                <p class="footer_lorem_text">
+                    Số 202, Đường Ngô Quyền, Phường 6, Tp.Đà Lạt, Lâm Đồng<br /><br />
+                    Tham khảo Google map<br />
+                    <a href="https://maps.app.goo.gl/JKej3ZbkY4mLbpi38?g_st=iz">
+                        Google map
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+    @RenderSection("js", false)
+</body>
+</html>
