@@ -27,11 +27,11 @@ namespace shopxe_2.Areas.admin.Controllers
             maping_hang h = new maping_hang();
             if (String.IsNullOrEmpty(model.ten))
             {
-                ViewBag.err = "khong dc de trong du lieu";
+                ViewBag.err = "Vui lòng nhập tên";
             }
             if (h.Them(model) == -1)
             {
-                ViewBag.err = "da co loi xay ra ";
+                ViewBag.err = "Đã có lỗi xảy ra hãy thao tác lại";
             }
             else
             {
@@ -50,11 +50,11 @@ namespace shopxe_2.Areas.admin.Controllers
             maping_hang h = new maping_hang();
             if (String.IsNullOrEmpty(model.ten))
             {
-                ViewBag.err = "khong dc de trong du lieu";
+                ViewBag.err = "Vui lòng nhập tên";
             }
             if (h.capnhat(model) == -1)
             {
-                ViewBag.err = "da co loi xay ra ";
+                ViewBag.err = "Đã có lỗi xảy ra hãy thao tác lại";
             }
             else
             {
@@ -68,7 +68,7 @@ namespace shopxe_2.Areas.admin.Controllers
             var l = new maping_loai();
             if (l.xoa(id) == -1)
             {
-                ViewBag.err = "da co loi xay ra ";
+                ViewBag.err = "Đã có lỗi xảy ra hãy thao tác lại";
             }
             else
             {

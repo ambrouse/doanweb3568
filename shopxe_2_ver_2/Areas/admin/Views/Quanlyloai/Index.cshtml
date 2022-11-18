@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<shopxe_2.Models.loai>
 @{
     shopxe_2.Models.Database db = new shopxe_2.Models.Database();
-    ViewBag.Title = "danh sach loai xe";
+    ViewBag.Title = "Danh sách loại xe";
     Layout = "~/Areas/admin/Views/layout/layout.cshtml";
 }
 @section css{
@@ -24,13 +24,13 @@
         <div class="list__item">
             <p>@i.id</p>
             <p>@i.ten</p>
-            <a href="~/admin/Quanlyloai/Capnhat?id=@i.id">sua</a>
-            <a href="#" onclick="deleteid(@i.id)">xoa</a>
+            <a href="~/admin/Quanlyloai/Capnhat?id=@i.id">Sửa</a>
+            <a href="#" onclick="deleteid(@i.id)">Xóa</a>
         </div>
     }
 </div>
 <script>
     var deleteid = (id) => {
-        if (confirm("you sur") == true) { location.href = "/admin/Quanlyloai/Xoa?id=" + id }
+        if (confirm("Xóa là mất đó nha") == true) { location.href = "/admin/Quanlyloai/Xoa?id=" + id }
     }
 </script>

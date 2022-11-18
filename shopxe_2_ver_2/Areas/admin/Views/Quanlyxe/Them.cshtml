@@ -1,6 +1,6 @@
 ﻿@model shopxe_2.Models.sanpham
 @{
-    ViewBag.Title = "them moi xe";
+    ViewBag.Title = "Thêm sản phẩm mới";
     shopxe_2.Models.Database db = new shopxe_2.Models.Database();
     Layout = "~/Areas/admin/Views/layout/layout.cshtml";
 }
@@ -24,7 +24,7 @@
         </select>
         <input type="file" name="file_1" />
         <input type="file" name="file_2" />
-        <button type="submit">create</button>
+        <button type="submit">Thêm</button>
         <p style="color:darkred">@ViewBag.err</p>
     </form>
 </div>

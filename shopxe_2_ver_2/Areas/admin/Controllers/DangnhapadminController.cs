@@ -27,7 +27,7 @@ namespace shopxe_2.Areas.admin.Controllers
                 return RedirectToAction("Index", "Quanlyxe");
             }
             else {
-                ViewBag.err = "sai tai khoan hoat mat khau";
+                ViewBag.err = "Sai tài khoản hoặc mật khẩu";
                 return View();
             }
             

@@ -6,8 +6,8 @@
     Layout = "~/Views/layout/layout.cshtml";
 }
 
-<div class="container"style="position:relative;top:50px;">
-    <h2>Hình ảnh của xe    </h2>
+<div class="container">
+     <h2 style="visibility:hidden;z-index:-1;">Hình ảnh của xe</h2>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -97,11 +97,6 @@
 }
 
 @section css{
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/accect/css/StyleSheet1.css">
     <link rel="stylesheet" href="~/accect/css/main_chiTiet.css" />
-}
-@if (ViewBag.err == 6) {
-    <script>
-        alert("texttttttttttttt")
-    </script>
 }

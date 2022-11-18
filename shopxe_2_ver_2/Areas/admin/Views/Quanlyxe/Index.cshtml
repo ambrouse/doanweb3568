@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<shopxe_2.Models.sanpham>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Danh sách sản phẩm";
     Layout = "~/Areas/admin/Views/layout/layout.cshtml";
 }
 @section css{
@@ -27,14 +27,14 @@
             <p>@i.ten</p>
             <p>@i.loai1.ten</p>
             <p>@i.hang1.ten</p>
-            <a href="~/admin/Quanlyxe/Update?id=@i.id">update</a>
-            <a href="#" onclick="deleteid(@i.id)">Delete</a>
+            <a href="~/admin/Quanlyxe/Update?id=@i.id">Sửa</a>
+            <a href="#" onclick="deleteid(@i.id)">Xóa</a>
         </div>
     }
 </div>
 <script>
     var deleteid = (id) => {
-        if (confirm("you sur") == true) {
+        if (confirm("Xóa là mất đó nha") == true) {
             location.href ="/admin/Quanlyxe/Delete?id="+id
         }
     }

@@ -1,6 +1,6 @@
 ﻿@model shopxe_2.Models.loai
 @{
-    ViewBag.Title = "Capnhat";
+    ViewBag.Title = "Cập nhật loại xe"+Model.ten;
     Layout = "~/Areas/admin/Views/layout/layout.cshtml";
 }
 @section css{
@@ -10,7 +10,7 @@
     <form action="/admin/Quanlyloai/Capnhat" class="create__item" method="post">
         <input type="number" name="id" placeholder="nhap ten" style="visibility: hidden" value="@Model.id">
         <input type="text" name="ten" placeholder="nhap ten"value="@Model.ten">
-        <button type="submit">create</button>
+        <button type="submit">Cập nhật</button>
         <p style="color:darkred">@ViewBag.err</p>
     </form>
 </div>

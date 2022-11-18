@@ -13,7 +13,7 @@ namespace shopxe_2.Models.hamxuly
         public void sendmail(String tomail,String conten) {
             String SendMailFrom = "thichthichich38@gmail.com";
             String SendMailTo = tomail;
-            String SendMailSubject = "Thông báo đặt hàng";
+            String SendMailSubject = "Thông báo đặc hàng từ Thảo My";
             String SendMailBody = conten;
             SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com", 587);
             SmtpServer.DeliveryMethod = SmtpDeliveryMethod.Network;

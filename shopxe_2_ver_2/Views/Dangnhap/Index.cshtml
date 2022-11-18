@@ -1,6 +1,10 @@
 ﻿
 @{
-    Layout = null;
+    ViewBag.Title = "Thảo my - Đăng nhập thông tin";
+    ViewBag.keywords = "Thảo my - Đăng nhập thông tin ";
+    ViewBag.description = "Cho thuê xe ";
+    Layout = "~/Views/layout/layout.cshtml";
+}
 }
 
 <!DOCTYPE html>
@@ -10,31 +14,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/accect/css/cssreset.css">
     <link rel="stylesheet" href="~/accect//css/dangnhap.css">
-    <title>Document</title>
+    <title>Đăng nhập</title>
 </head>
 <body>
     <form method="post">
-        
+
         <div class="accout">
             <div class="accout__item">
-                <p>Nhap thong tin de mua hang</p>
-                <p>Neu ban da tung mua hang thi chi can nhap email</p>
-                <p>Con neu ban da mua hang va muon thay doi thong tin thi phai nhap lai ca ten va sodt</p>
+                <p>-Nhập thông tin để mua hàng</p>
+                <p>-Nếu bạn đã từng mua hàng thì chỉ cần nhập mail</p>
+                <p>-Nếu bạn đã từng mua hàng nhưng muốn đổi số điện thoại hay tên thì phải nhập đầy đủ thông tin</p>
             </div>
             <div class="accout__item">
-                <input type="text" placeholder="email" name="email">
+                <input type="text" placeholder="Vui lòng Nhập đúng gmail" name="email">
             </div>
             <div class="accout__item">
-                <input type="number" placeholder="sodt" name="sodt">
+                <input type="number" placeholder="Vui lòng nhập đúng số điện thoại" name="sodt">
             </div>
             <div class="accout__item">
-                <input type="text" placeholder="Ten" name="ten">
+                <input type="text" placeholder="nhập tên" name="ten">
             </div>
             <div class="accout__item">
-                <button type="submit">okay</button>
+                <button type="submit">Đồng ý</button>
             </div>
             <p class="err">@ViewBag.err</p>
         </div>
     </form>
 </body>
 </html>
+@section css{
+    <link rel="stylesheet" href="~/accect/css/StyleSheet1.css">
+}

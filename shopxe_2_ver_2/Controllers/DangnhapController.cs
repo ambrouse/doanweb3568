@@ -27,13 +27,16 @@ namespace shopxe_2.Controllers
                 else {
                     if (String.IsNullOrEmpty(model.email) || String.IsNullOrEmpty(model.ten))
                     {
-                        ViewBag.err = "khong duoc bo trong du lieu";
+                        ViewBag.err = "Không được để trống dữ liệu";
                         return View();
                     }
-
+                    if(model.ten.Length > 10){
+                        ViewBag.err = "Tên tối đa 10 kí tự";
+                        return View();
+                    }
                     if (model.sodt.ToString().Length< 9|| model.sodt.ToString().Length>=10)
                     {
-                        ViewBag.err = "so dien thoai khong dung dinh dang";
+                        ViewBag.err = "Số điện thoại sai định dạng";
                         return View();
                     }
                     var x = db.users.FirstOrDefault(c => c.email == model.email);
@@ -47,13 +50,17 @@ namespace shopxe_2.Controllers
             }
             if (String.IsNullOrEmpty(model.email) || String.IsNullOrEmpty(model.ten))
             {
-                ViewBag.err = "khong duoc bo trong du lieu";
+                ViewBag.err = "Không được để trống dữ liệu";
                return View();
             }
-
+            if (model.ten.Length > 10)
+            {
+                ViewBag.err = "Tên tối đa 10 kí tự";
+                return View();
+            }
             if (model.sodt.ToString().Length < 10 || model.sodt.ToString().Length >= 11)
             {
-                ViewBag.err = "so dien thoai khong dung dinh dang";
+                ViewBag.err = "Không được để trống dữ liệu";
                 return View();
             }
 

@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "them moi loai xe";
+    ViewBag.Title = "Thêm loại xe mới";
     Layout = "~/Areas/admin/Views/layout/layout.cshtml";
 }
 @section css{
@@ -9,7 +9,7 @@
 <div class="create">
     <form action="/admin/Quanlyloai/Them"class="create__item" method="post">
         <input type="text" name="ten" placeholder="nhap ten">
-        <button type="submit">create</button>
+        <button type="submit">Thêm</button>
         <p style="color:darkred">@ViewBag.err</p>
     </form>
 </div>

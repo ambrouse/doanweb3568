@@ -33,15 +33,15 @@ namespace shopxe_2.Areas.admin.Controllers
             Database db = new Database();
             if (file_1 == null || file_2 == null)
             {
-                ViewBag.err = "chua nhap anh";
+                ViewBag.err = "Chưa nhập ảnh";
                 return View(model);
             }
             if (String.IsNullOrEmpty(model.ten)) {
-                ViewBag.err = "chua nhap ten xe";
+                ViewBag.err = "Vui lòng nhập tên";
                 return View(model);
             }
             if (model.gia <= 0) {
-                ViewBag.err = "gia phai lon hon 0";
+                ViewBag.err = "Giá trị phải lớn hơn 0";
                 return View(model);
             }
             String x = Server.MapPath("/imgxe/");
@@ -68,10 +68,10 @@ namespace shopxe_2.Areas.admin.Controllers
         {
             Database db = new Database(); var update = db.sanphams.Find(model.id);
             if (String.IsNullOrEmpty(model.ten)) {
-                ViewBag.err = "khong duoc de trong ten";
+                ViewBag.err = "Vui lòng nhập tên";
                 return View(model);    
             }
-            if (file_1 == null || file_2 == null)
+            if (file_1 == null && file_2 == null)
             {
                 update.ten = model.ten;
                 update.gia = model.gia;
@@ -79,6 +79,11 @@ namespace shopxe_2.Areas.admin.Controllers
                 update.hang = model.hang;
                 db.SaveChanges();
                 return RedirectToAction("Index");
+            }
+            if (file_1 == null || file_2 == null)
+            {
+                ViewBag.err = "Nếu muốn đổi ảnh thì phải đổi cả hai";
+                return View();
             }
             System.IO.File.Delete(Server.MapPath(update.imgurl_1)); System.IO.File.Delete(Server.MapPath(update.imgurl_2)); System.IO.File.Delete(Server.MapPath(update.imgurl_3));
             var chuyendoi = new chuyendoi();

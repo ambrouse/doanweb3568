@@ -60,14 +60,14 @@ namespace shopxe_2.Controllers
             }
 
             conten = conten.Replace("{{giaca}}",x.ToString());
-            conten += "</table><p>chung toi se goi dien de xac nhan don hang va ghi nhan dia chi cua quy khach</p>";
-            conten += "<p>hoat ban co the chu dong nhan tin qua zalo : 0326030299</p>";
+            conten += "</table><p>Chúng tôi sẽ gọi điện lại sau 5 phút để xác nhận đơn hàng và trao đổi địa chỉ với quý khách</p>";
+            conten += "<p>Hoặc bạn có thể chủ động nhắn tin qua Zalo : 0326030299</p>";
             conten += "</body></html>";
             try {
                 new mail().sendmail(tomail, conten);
             }
             catch (Exception e) {
-                ViewBag.err = "gui mail that bao quy khach vui long tien hanh dat hang lai";
+                ViewBag.err = "Gửi mail thất bại quý khách vui lòng kiểm tra mail và đặc hàng lại";
                 return RedirectToAction("Index", "Mail");
             }
             
