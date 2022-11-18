@@ -16,7 +16,11 @@
     <form method="post">
         
         <div class="accout">
-            <p>nhap thong tin de mua hang</p>
+            <div class="accout__item">
+                <p>Nhap thong tin de mua hang</p>
+                <p>Neu ban da tung mua hang thi chi can nhap email</p>
+                <p>Con neu ban da mua hang va muon thay doi thong tin thi phai nhap lai ca ten va sodt</p>
+            </div>
             <div class="accout__item">
                 <input type="text" placeholder="email" name="email">
             </div>
@@ -29,6 +33,7 @@
             <div class="accout__item">
                 <button type="submit">okay</button>
             </div>
+            <p class="err">@ViewBag.err</p>
         </div>
     </form>
 </body>

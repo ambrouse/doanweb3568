@@ -12,13 +12,10 @@ namespace shopxe_2.Areas.admin.Controllers
     {
         // GET: admin/Quanlyhang
         [kiemtradangnhap()]
-        public ActionResult Index(String name)
+        public ActionResult Index()
         {
             Database db = new Database();
-            if (name == null) {
                 return View(db.hangs.ToList());
-            }
-            return View(db.hangs.Where(c => c.ten.ToLower().Contains(name.ToLower())).ToList());
         }
         public ActionResult Them()
         {

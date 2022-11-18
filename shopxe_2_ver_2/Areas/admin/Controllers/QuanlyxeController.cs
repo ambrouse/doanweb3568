@@ -67,16 +67,20 @@ namespace shopxe_2.Areas.admin.Controllers
         public ActionResult Update(sanpham model, HttpPostedFileBase file_1, HttpPostedFileBase file_2)
         {
             Database db = new Database(); var update = db.sanphams.Find(model.id);
-            System.IO.File.Delete(Server.MapPath(update.imgurl_1)); System.IO.File.Delete(Server.MapPath(update.imgurl_2)); System.IO.File.Delete(Server.MapPath(update.imgurl_3));
             if (String.IsNullOrEmpty(model.ten)) {
                 ViewBag.err = "khong duoc de trong ten";
                 return View(model);    
             }
             if (file_1 == null || file_2 == null)
             {
-                ViewBag.err = "ban phai nhap lai cac anh khi update";
-                return View(model);
+                update.ten = model.ten;
+                update.gia = model.gia;
+                update.loai = model.loai;
+                update.hang = model.hang;
+                db.SaveChanges();
+                return RedirectToAction("Index");
             }
+            System.IO.File.Delete(Server.MapPath(update.imgurl_1)); System.IO.File.Delete(Server.MapPath(update.imgurl_2)); System.IO.File.Delete(Server.MapPath(update.imgurl_3));
             var chuyendoi = new chuyendoi();
             String x = Server.MapPath("/imgxe/");
                 String y_1 = x + chuyendoi.convertToUnSign3(file_1.FileName.ToLower());

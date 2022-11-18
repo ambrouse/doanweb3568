@@ -35,7 +35,7 @@ namespace shopxe_2.Controllers
             var chitiet = db.chitietdonhangs.Where(c => c.iddonhang == id).ToList();
             user u = (user)Session["user"];
             String tomail = u.email;
-            decimal? x = 10M;
+            decimal? x = 0M;
 
             for (int i = 0; i < chitiet.Count; i++) {
                 chitiet[i].soluong = soluong[i];
@@ -56,10 +56,12 @@ namespace shopxe_2.Controllers
                 conten_2 = conten_2.Replace("{{loai}}", db.sanphams.Find(i.idsanpham).loai1.ten);
                 conten_2 = conten_2.Replace("{{soluong}}", i.soluong.ToString());
                 conten += conten_2;
-                x =x+i.dongia;
+                x =x+i.dongia*i.soluong;
             }
 
             conten = conten.Replace("{{giaca}}",x.ToString());
+            conten += "</table><p>chung toi se goi dien de xac nhan don hang va ghi nhan dia chi cua quy khach</p>";
+            conten += "<p>hoat ban co the chu dong nhan tin qua zalo : 0326030299</p>";
             conten += "</body></html>";
             try {
                 new mail().sendmail(tomail, conten);
