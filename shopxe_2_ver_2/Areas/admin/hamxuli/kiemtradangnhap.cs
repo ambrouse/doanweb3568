@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using shopxe_2.Models;
-namespace shopxe.Areas.admin.hamxuli
+namespace shopxe_2.Areas.admin.hamxuli
 {
     public class kiemtradangnhap : AuthorizeAttribute
     {

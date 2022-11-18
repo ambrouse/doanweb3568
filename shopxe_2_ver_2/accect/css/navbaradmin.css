@@ -1,38 +1,21 @@
+body {
+background-color: rgba(0, 0, 0, 0.733);
+}
 .nav {
-  max-width: 1440px;
-  width: 30%;
-  display: flex;
-  position: relative;
+    max-width: 1440px;
+    max-width: 30%;
+    width: 30%;
+    display: flex;
+    position: relative;
+    border-right: 2px #04ff04 solid;
 }
 
 .nav__item {
   font-size: 1.3rem;
-  width: 50%;
+  width: 100%;
   text-align: center;
   height: 50px;
 }
-
-.nav__item form {
-  padding: 10px 0px;
-  display: flex;
-}
-
-.nav__item form input {
-  width: 80%;
-  padding: 5px;
-  background-color: rgba(0, 0, 0, 0.151);
-}
-
-.nav__item form button {
-  width: 20%;
-  background-color: rgba(0, 0, 0, 0.233);
-  font-size: 1rem;
-}
-.nav__item form button span {
-  display: block;
-  transform: rotate(90deg);
-}
-
 .nav__item a {
   line-height: 50px;
   text-decoration: none;
@@ -58,7 +41,6 @@
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.733);
 }
 
 .nav__item .dropdow__item a {

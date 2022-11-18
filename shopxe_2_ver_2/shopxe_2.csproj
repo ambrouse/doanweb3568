@@ -202,6 +202,8 @@
     <Compile Include="Areas\admin\hamxuli\kiemtradangnhap.cs" />
     <Compile Include="Areas\admin\hamxuli\kiemtramatkhau.cs" />
     <Compile Include="Areas\admin\hamxuli\kiemtrasesion.cs" />
+    <Compile Include="Areas\admin\hamxuli\maping_hang.cs" />
+    <Compile Include="Areas\admin\hamxuli\maping_loai.cs" />
     <Compile Include="Controllers\ChitietController.cs" />
     <Compile Include="Controllers\DangnhapController.cs" />
     <Compile Include="Controllers\DanhsachxeController.cs" />
@@ -245,6 +247,10 @@
     <Content Include="accect\js\bootstrap.bundle.min.js.map" />
     <Content Include="accect\js\bootstrap.js.map" />
     <Content Include="accect\js\bootstrap.min.js.map" />
+    <Content Include="Areas\admin\Views\Quanlyloai\Them.cshtml" />
+    <Content Include="Areas\admin\Views\Quanlyloai\Capnhat.cshtml" />
+    <Content Include="Areas\admin\Views\Quanlyhang\Them.cshtml" />
+    <Content Include="Areas\admin\Views\Quanlyhang\Capnhat.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Chitiet\Index.cshtml" />
     <Content Include="Views\Danhsachxe\Danhsachxemoinhat.cshtml" />

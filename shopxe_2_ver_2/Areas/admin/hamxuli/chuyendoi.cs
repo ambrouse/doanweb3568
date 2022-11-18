@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 using System.Text;
 using System.Web;
 
-namespace shopxe.Areas.admin.Controllers
+namespace shopxe_2.Areas.admin.Controllers
 {
     public class chuyendoi
     {

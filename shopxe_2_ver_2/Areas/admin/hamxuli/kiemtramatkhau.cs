@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using shopxe_2.Models;
-namespace shopxe.Areas.admin.hamxuli
+namespace shopxe_2.Areas.admin.hamxuli
 {
     public class kiemtramatkhau
     {

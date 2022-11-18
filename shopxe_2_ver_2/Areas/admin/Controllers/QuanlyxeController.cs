@@ -7,22 +7,24 @@ using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using shopxe_2.Models;
-using shopxe.Areas.admin.hamxuli;
+using shopxe_2.Areas.admin.hamxuli;
 
-namespace shopxe.Areas.admin.Controllers
+namespace shopxe_2.Areas.admin.Controllers
 {
     public class QuanlyxeController : Controller
     {
         // GET: admin/Quanlydulieu
         [kiemtradangnhap()]
-        public ActionResult Index()
+        public ActionResult Index(String name)
         {
             Database db = new Database();
-            return View(db.sanphams.ToList());
+            if (String.IsNullOrEmpty(name)) {
+                return View(db.sanphams.ToList());  
+            }
+            return View(db.sanphams.Where(c => c.ten.ToLower().Contains(name.ToLower())).ToList());
         }
         [kiemtradangnhap()]
         public ActionResult Them() {
-            Database db = new Database();
             return View(new sanpham());
         }
         [HttpPost]
@@ -84,6 +86,7 @@ namespace shopxe.Areas.admin.Controllers
                 update.imgurl_1 = "/imgxe/" + chuyendoi.convertToUnSign3(file_1.FileName.ToLower());
                 update.imgurl_2 = "/imgxe/" + chuyendoi.convertToUnSign3(file_2.FileName.ToLower());
             update.ten = model.ten;
+            update.gia = model.gia;
             update.loai = model.loai;
             update.hang = model.hang;
             db.SaveChanges();

@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "them moi hang xe";
+    Layout = "~/Areas/admin/Views/layout/layout.cshtml";
+}
+@section css{
+    <link rel="stylesheet" href="~/accect/css/them.css" />
+}
+<div class="create">
+    <form action="/admin/Quanlyhang/Them" class="create__item" method="post">
+        <input type="text" name="ten" placeholder="nhap ten">
+        <button type="submit">create</button>
+        <p style="color:darkred">@ViewBag.err</p>
+    </form>
+</div>
+

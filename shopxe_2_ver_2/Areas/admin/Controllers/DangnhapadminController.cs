@@ -1,4 +1,4 @@
-﻿using shopxe.Areas.admin.hamxuli;
+﻿using shopxe_2.Areas.admin.hamxuli;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using shopxe_2.Models;
 using System.Web.Security;
 
-namespace shopxe.Areas.admin.Controllers
+namespace shopxe_2.Areas.admin.Controllers
 {
     public class DangnhapadminController : Controller
     {

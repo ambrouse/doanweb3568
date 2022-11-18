@@ -1,0 +1,17 @@
+﻿@model shopxe_2.Models.loai
+@{
+    ViewBag.Title = "Capnhat";
+    Layout = "~/Areas/admin/Views/layout/layout.cshtml";
+}
+@section css{
+    <link rel="stylesheet" href="~/accect/css/them.css" />
+}
+<div class="create">
+    <form action="/admin/Quanlyloai/Capnhat" class="create__item" method="post">
+        <input type="number" name="id" placeholder="nhap ten" style="visibility: hidden" value="@Model.id">
+        <input type="text" name="ten" placeholder="nhap ten"value="@Model.ten">
+        <button type="submit">create</button>
+        <p style="color:darkred">@ViewBag.err</p>
+    </form>
+</div>
+

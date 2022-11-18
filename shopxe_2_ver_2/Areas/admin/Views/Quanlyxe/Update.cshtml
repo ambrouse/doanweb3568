@@ -11,6 +11,7 @@
 <div class="create">
     <form action="/admin/Quanlyxe/Update" enctype="multipart/form-data" class="create__item" method="post">
         <input type="text" name="ten" placeholder="nhap ten" value="@Model.ten">
+        <input type="text" name="gia" placeholder="nhap gia tien" value="@Model.gia">
         <input type="number" name="id" value="@Model.id" style="visibility:hidden;" />
         <select name="hang">
             @foreach (var i in db.loais)
